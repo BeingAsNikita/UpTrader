@@ -45,7 +45,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-
     background-image: url('../img/bg-2.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -64,5 +63,51 @@
     h2 {
         font-size: 24px;
         color: $text;
+        margin-bottom: 30px;
     }
+}
+
+.main__list-item {
+    margin-bottom: 10px;
+    width: 600px;
+    position: relative;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &::before {
+        counter-increment: counter;
+        content: counter(counter);
+        position:absolute;
+        top:-2px;
+        left: -30px;
+        padding:4px 0;
+        color: #009e82;
+        font-size: 32px;
+        font-weight:bold;
+        }
+}
+
+.main__list {
+    padding-left: 30px;
+    list-style: none;
+    counter-reset: counter;
+}
+
+.main__link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    width: 156px;
+    height: 45px;
+    border-radius: 3px;
+    background-color: #009e82;
+    color: #fff;
+    padding: 13px 26px;
+}
+
+.hidden {
+    opacity: 0;
+    z-index: -1;
 }

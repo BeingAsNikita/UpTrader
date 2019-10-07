@@ -7,21 +7,24 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/animate.css">
     </head>
     <body>
         <header class="header" id="header">
-            <div class="container" >
+            <div class="container header__wrap" >
                 <h1 class="header__title">Выберите способ зароботка</h1>
             
                 <ul class="header__list">
-                    <li class="header__item"><a href="#" class="header__item-link header__item-link--trade">Торговать</a></li>
-                    <li class="header__item"><a href="#" class="header__item-link  header__item-link--invest">Инвестировать</a> </li>
-                    <li class="header__item"><a href="#" class="header__item-link header__item-link--attract">Привлечь инвесторов</a></li>
+                    <li class="header__item">
+                        <a href="#" class="header__item-link header__item-link--trade" onclick="animation()" id="trade">Торговать</a>
+                    </li>
+                    <li class="header__item"><a href="#" class="header__item-link  header__item-link--invest"  onclick="animation()" id="invest">Инвестировать</a> </li>
+                    <li class="header__item"><a href="#" class="header__item-link header__item-link--attract"  onclick="animation()" id="attract">Привлечь инвесторов</a></li>
                 </ul>
             </div>
         </header>
         
-        <section id="main" class="main">
+        <section id="main" class="main hidden">
 
             <div class="line"></div>
 
