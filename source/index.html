@@ -7,7 +7,6 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/animate.css">
     </head>
     <body>
         <header class="header" id="header">
@@ -16,10 +15,89 @@
             
                 <ul class="header__list">
                     <li class="header__item">
-                        <a href="#" class="header__item-link header__item-link--trade" onclick="animation()" id="trade">Торговать</a>
+                        <a href="#" class="header__link header__link--trade" onclick="animation()" id="trade">Торговать</a>
                     </li>
-                    <li class="header__item"><a href="#" class="header__item-link  header__item-link--invest"  onclick="animation()" id="invest">Инвестировать</a> </li>
-                    <li class="header__item"><a href="#" class="header__item-link header__item-link--attract"  onclick="animation()" id="attract">Привлечь инвесторов</a></li>
+                    <li class="header__item">
+                        <a href="#" class="header__link  header__link--invest"  onclick="animation()" id="invest">Инвестировать</a> 
+                    </li>
+                    <li class="header__item">
+                        <a href="#" class="header__link header__link--attract"  onclick="animation()" id="attract">Привлечь инвесторов</a>
+                    </li>
+                </ul>
+
+                <ul class="header__list--mobile">
+       
+                    <li class="header__item--mobile">
+                        <a href="#" id="trade-mobile" class="header__link--mobile header__link--mobile--trade" onclick="openContent()">Самостоятельно торговать</a>
+
+                        <div class="main__content main__content--close" id="trade-mobile-content">
+                                <p>Если вы ищете пассивный доход и предпочитаете, 
+                                    чтобы деньги для вас зарабатывал тот, кто умеет это делать, 
+                                    тогда попробуйте ЛАММ. ЛАММ – это сервис копирования сделок успешных трейдеров. 
+                                    Доходность ни чем не ограничена!
+                                </p>
+                                
+                                <h2>Как это работает</h2>
+                                
+                                <ol class="main__list">
+                                    <li class="main__list-item">Вы выбираете управляющего из рейтинга по фильтру Options</li>
+                                    <li class="main__list-item">Подключаете свой счет к счету Управляющего</li>
+                                    <li class="main__list-item">На вашем счете начинается копирование сделок</li>
+                                    <li class="main__list-item">Обратите внимание, что вы не перечисляете свои деньги Управляющему. Все ваши средства остаются на Вашем счете.</li>
+                                    <li class="main__list-item">Вы можете подключиться к нескольким Управляющим одновременно.</li>
+                                    <li class="main__list-item">Вы можете отключиться от Управляющих в любой момент.</li>
+                                </ol>
+                                <a href="" class="main__link">Продолжить</a>
+                        </div>
+                    </li>
+
+                    <li class="header__item--mobile">
+                        <a href="#" id="invest-mobile" class="header__link--mobile" onclick="openContent()">Инвестировать</a> 
+
+                        <div class="main__content  main__content--close" id="invest-mobile-content">
+                                <p>Если вы ищете пассивный доход и предпочитаете, 
+                                    чтобы деньги для вас зарабатывал тот, кто умеет это делать, 
+                                    тогда попробуйте ЛАММ. ЛАММ – это сервис копирования сделок успешных трейдеров. 
+                                    Доходность ни чем не ограничена!
+                                </p>
+                                
+                                <h2>Как это работает</h2>
+                                
+                                <ol class="main__list">
+                                    <li class="main__list-item">Вы выбираете управляющего из рейтинга по фильтру Options</li>
+                                    <li class="main__list-item">Подключаете свой счет к счету Управляющего</li>
+                                    <li class="main__list-item">На вашем счете начинается копирование сделок</li>
+                                    <li class="main__list-item">Обратите внимание, что вы не перечисляете свои деньги Управляющему. Все ваши средства остаются на Вашем счете.</li>
+                                    <li class="main__list-item">Вы можете подключиться к нескольким Управляющим одновременно.</li>
+                                    <li class="main__list-item">Вы можете отключиться от Управляющих в любой момент.</li>
+                                </ol>
+                                <a href="" class="main__link">Продолжить</a>
+                            </div>
+                    </li>
+                    <li class="header__item--mobile">
+                        <a href="#"  id="attract-mobile" class="header__link--mobile" onclick="openContent()">Привлекать инвесторов</a>
+
+                        <div class="main__content  main__content--close" id="attract-mobile-content">
+                                <p>Если вы ищете пассивный доход и предпочитаете, 
+                                    чтобы деньги для вас зарабатывал тот, кто умеет это делать, 
+                                    тогда попробуйте ЛАММ. ЛАММ – это сервис копирования сделок успешных трейдеров. 
+                                    Доходность ни чем не ограничена!
+                                </p>
+                                
+                                <h2>Как это работает</h2>
+                                
+                                <ol class="main__list">
+                                    <li class="main__list-item">Вы выбираете управляющего из рейтинга по фильтру Options</li>
+                                    <li class="main__list-item">Подключаете свой счет к счету Управляющего</li>
+                                    <li class="main__list-item">На вашем счете начинается копирование сделок</li>
+                                    <li class="main__list-item">Обратите внимание, что вы не перечисляете свои деньги Управляющему. Все ваши средства остаются на Вашем счете.</li>
+                                    <li class="main__list-item">Вы можете подключиться к нескольким Управляющим одновременно.</li>
+                                    <li class="main__list-item">Вы можете отключиться от Управляющих в любой момент.</li>
+                                </ol>
+                                <a href="" class="main__link">Продолжить</a>
+                            </div>
+                    </li>
+
                 </ul>
             </div>
         </header>

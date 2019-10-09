@@ -1,27 +1,60 @@
 .header  {
     height: 100vh;
+    background-color: #f3f2da;
     background-image: url('../img/bg-1.png');
     background-size: cover;
+    background-position: center;
+
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+    padding-top: 40px;
+    padding-bottom: 50px;
+
+    @media (min-width: $desktop) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
 }
 
+
+
 .header__title {
-    margin: 0;
-    font-size: 48px;
+    margin: 0 auto;
+    font-size: 36px;
     color: $text;
     text-align: center;
-    margin-bottom: 85px;
+    margin-bottom: 20px;
+    font-weight: 300;
+    width: 330px;
+
+    @media (min-width: $desktop) {
+        font-size: 48px;
+        margin-bottom: 85px;
+    }
+
 }
 
 .header__list {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+
+
+    display: none;
+
+
+    @media (min-width: $desktop) {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &--mobile {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .header__item {
@@ -30,6 +63,7 @@
     background-color: rgba(#fff, 0.5);
     border-radius: 50%;
     position: relative;
+
 
 
  
@@ -67,9 +101,16 @@
         align-items: flex-end;
         padding-bottom: 125px;
     }
+
+    &--mobile {
+        font-size: 16px;
+        margin-bottom: 13px;
+    }
 }
 
-.header__item-link {
+
+.header__link {
+
     &::before {
         content: "";
         position: absolute;
@@ -85,6 +126,49 @@
 
     }
 
+    &--mobile {
+        padding-left: 70px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-right: 50px;
+        display: block;
+        font-size: 19px;
+        background-color: rgba(#fff, 0.5);
+        max-width: 90%;
+        margin: 0 auto;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 10px;
+
+        }
+
+        &::before {
+            left: 15px;
+        }
+
+        &::after {
+            right: 15px;
+        }
+        
+        &--trade::before {
+            background-image: url('../img/icon-1.svg')
+        }
+    
+        &--invest::before {
+            background-image: url('../img/icon-2.svg')
+        }
+    
+        &--attract::before {
+            background-image: url('../img/icon-3.svg')
+        }
+    }
+
     &--trade::before {
         background-image: url('../img/icon-1.svg')
     }
@@ -96,5 +180,6 @@
     &--attract::before {
         background-image: url('../img/icon-3.svg')
     }
+
 
 }

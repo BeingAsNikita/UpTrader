@@ -1,4 +1,6 @@
 $text:#171717; 
+$tablet: 640px;
+$desktop: 1028px;
 
 body,
 html {
@@ -6,6 +8,7 @@ html {
     font-family: "P FDin Text Pro", sans-serif;
     font-size: 18px;
     color: $text; 
+    min-width: 377px;
   }
   
   img {
@@ -31,8 +34,12 @@ html {
   
   
 .container  {
+  min-width: 377px;
+  margin: 0 auto;
+
+  @media (min-width: $desktop) {
     width: 1200px;
-    margin: 0 auto;
+  }
 }
 
 .line {

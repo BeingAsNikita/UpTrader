@@ -1,14 +1,17 @@
 .fadeOutUp {
     transform: translateY(-100vh);
-    transition: all ease-out 2s;
-  
+    transition: all 1.5s;
     animation: up;
+    animation-timing-function: cubic-bezier(0.03, 1.4, 0.25, 0.15);
+    opacity: 0;
+
 }
 
 .fade {
     transition: all ease-in-out 1s;
     opacity: 0;
     z-index: -1;
+    
 }
 
 .emergence {
@@ -18,17 +21,16 @@
 }
 
 @keyframes up {
-        
-            0% { 
-                opacity: 1; 
-            }
+    0% {
+        opacity: 1;   
+    }
 
-            90% {
-                opacity: 1;
-            }
+    98% {
+        opacity: 1;
+    }
 
-            100% { 
-                opacity: 0; 
-        }
-     
+
+    100% {
+        opacity: 0;
+    }
 }

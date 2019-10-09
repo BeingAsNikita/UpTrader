@@ -10,8 +10,8 @@ function animation(target) {
 */
 
     headerWrap.classList.add('fadeOutUp');
-    setTimeout(() => header.classList.add('fade'), 800);
-    setTimeout(() => main.classList.add('emergence', ), 100);
+    setTimeout(() => header.classList.add('fade'), 500);
+    setTimeout(() => main.classList.add('emergence', ), 200);
     console.log(event.target.id)
 
     switch(event.target.id) {
@@ -25,4 +25,19 @@ function animation(target) {
 
       }
     
+}
+
+function openContent() {
+    var header = document.querySelector('#header');
+    var btn = document.querySelector('#'+ event.target.id + '-content');
+    console.log(header.offsetHeight)
+    if(header.style.backgroundImage !== 'none') {
+        header.style.backgroundImage = 'none';
+        header.style.height = 100 + '%';
+        btn.classList.toggle('main__content--close');
+    } else {
+        header.style.backgroundImage = 'url("../img/bg-1.png")';
+        btn.classList.toggle('main__content--close');
+        header.style.height = 100 + 'vh';
+    }
 }
